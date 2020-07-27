@@ -1,0 +1,3 @@
+node_modules
+public/uploads
+src/db/database.sqlite
