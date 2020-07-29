@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
   height: 100%;
@@ -14,4 +14,5 @@ export const Content = styled.div`
   background: #fff;
   border-radius: 4px;
   padding: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
 `;

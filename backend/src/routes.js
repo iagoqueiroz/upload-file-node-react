@@ -12,7 +12,11 @@ routes.post("/files", upload.single("file"), async (req, res) => {
 
   const { filename: name, size } = req.file;
 
-  const file = await File.create({ name, size, url: `/uploads/${name}` });
+  const file = await File.create({
+    name,
+    size,
+    url: `http://localhost:3000/uploads/${name}`,
+  });
 
   return res.json(file);
 });
