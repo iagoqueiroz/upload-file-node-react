@@ -10,10 +10,11 @@ const upload = multer(multerConfig);
 routes.post("/files", upload.single("file"), async (req, res) => {
   console.log(req.file);
 
-  const { filename: name, size } = req.file;
+  const { filename: name, size, originalname } = req.file;
 
   const file = await File.create({
     name,
+    originalName: originalname,
     size,
     url: `http://localhost:3000/uploads/${name}`,
   });

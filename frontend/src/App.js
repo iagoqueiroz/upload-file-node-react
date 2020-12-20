@@ -21,7 +21,7 @@ function App() {
       setUploadedFiles(
         response.data.map((file) => ({
           id: file.id,
-          name: file.name,
+          name: file.originalName,
           preview: file.url,
           readableSize: filesize(file.size),
           uploaded: true,
